@@ -1,15 +1,34 @@
-export const callVillagers = async () => {
-    const res = await fetch('https://ac-vill.herokuapp.com/villagers');
-    const data = await res.json();
+import { formatVillagers } from './munge-utils';
 
-    return data.map((villager) => ({
-        id: villager._id,
-        name: villager.name,
-        url: villager.url,
-        image: villager.image,
-        quote: villager.quote,
-        personality: villager.personality,
-        species: villager.species,
-        skill: villager.skill
-    }))
+export const callVillagers = async () => {
+    const res = await fetch('https://ac-vill.herokuapp.com/villagers?perPage=400');
+    const data = await res.json();
+    const shapedData = formatVillagers(data);
+
+    return shapedData;
 }
+
+// export const callVillagers = async () => {
+//     let villagers = [];
+    
+//     const res = await fetch('http://acnhapi.com/v1/villagers');
+//     const data = await res.json();
+
+//     console.log('DATA', data)
+
+//     data.map((villager) => ({
+//         id: villager.id,
+//         name: villager.name.name-USen,
+//         icon: villager.icon_uri,
+//         image: villager.image_uri,
+//         quote: villager.saying,
+//         personality: villager.personality,
+//         species: villager.species,
+//         hobby: villager.hobby,
+//         catchphrase: villager.catch-phrase
+//     }))
+
+//     console.log(villagers)
+
+//     return villagers;
+// }

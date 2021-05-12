@@ -7,12 +7,14 @@ const VillagerList = ({ villagers }) => (
         aria-label="villagers">
             {villagers.map((villager) => {
                 return (
-                    <VillagerItem
-                        id={villager.id}
-                        name={villager.name}
-                        image={villager.image}
-                        quote={villager.quote}
-                    />
+                    <li key={villager.id} id={villager.id}>
+                        <VillagerItem
+                            id={villager.id}
+                            name={villager.name}
+                            image={villager.image}
+                            quote={villager.quote}
+                        />
+                    </li>
                 )
             })}
     </ul>
