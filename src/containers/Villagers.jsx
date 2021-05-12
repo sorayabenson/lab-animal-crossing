@@ -15,13 +15,12 @@ export default class Villagers extends Component {
             loading: false,
             villagers
         })
-        console.log(this.state)
     }
 
     render() {
         const { loading, villagers } = this.state;
 
-        if (loading) return <h1>we are circling for landing!</h1>
+        if (loading) return <h1>circling for landing!</h1>
 
         return (
             <>

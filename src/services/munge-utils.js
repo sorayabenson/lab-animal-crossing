@@ -7,7 +7,8 @@ export const formatVillagers = (data) => {
         const nameId = str.replace(regex, subst);
     
         return {
-            id: nameId,
+            nameId: nameId,
+            id: villager._id,
             name: villager.name,
             url: villager.url,
             image: villager.image,

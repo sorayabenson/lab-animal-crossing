@@ -3,11 +3,10 @@ import PropTypes from 'prop-types'
 import VillagerItem from './VillagerItem';
 
 const VillagerList = ({ villagers }) => (
-    <ul 
-        aria-label="villagers">
+    <ul aria-label='villagers'>
             {villagers.map((villager) => {
                 return (
-                    <li key={villager.id} id={villager.id}>
+                    <li key={villager.nameId} id={villager.id}>
                         <VillagerItem
                             id={villager.id}
                             name={villager.name}

@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Detail render renders a villager 1`] = `
+Array [
+  <div
+    aria-label="villager"
+    role="group"
+  >
+    <img
+      alt="Kiki"
+      src="https://vignette.wikia.nocookie.net/animalcrossing/images/c/c5/Kiki_NH.png/revision/latest?cb=20200801231206"
+    />
+    <h3>
+      Kiki
+    </h3>
+    <p>
+      "
+      Nothing ventured, nothing gained.
+      "
+    </p>
+    <p>
+      personality: 
+      normal
+    </p>
+    <p>
+      species: 
+      cat
+    </p>
+    <p>
+      skill: 
+      Fishing
+    </p>
+    <a
+      href="https://animalcrossing.fandom.com/wiki/Kiki"
+    >
+      Kiki
+      's secret diary
+    </a>
+  </div>,
+]
+`;

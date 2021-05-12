@@ -1,29 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+const VillagerDetail = ({ villager }) => {
+    const { image, name, quote, personality, species, skill, url } = villager;
 
-const VillagerDetail = ({ image, name, quote, personality, species,
-skill, url }) => {
     return (
-        <div>
+        <div role='group' aria-label='villager'>
             <img src={image} alt={name} />
             <h3>{name}</h3>
-            <p>{quote}</p>
-            <p>{personality}</p>
-            <p>{species}</p>
-            <p>{skill}</p>
-            <a href={url}>more info</a>
+            <p>"{quote}"</p>
+            <p>personality: {personality}</p>
+            <p>species: {species}</p>
+            <p>skill: {skill}</p>
+            <a href={url}>{name}'s secret diary</a>
         </div>
     )
 }
 
 VillagerDetail.propTypes = {
-    image: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    quote: PropTypes.string.isRequired,
-    personality: PropTypes.string.isRequired,
-    species: PropTypes.string.isRequired,
-    skill: PropTypes.string.isRequired,
-    url: PropTypes.string.isRequired,
+    villager: PropTypes.object.isRequired,    
 }
 
 export default VillagerDetail

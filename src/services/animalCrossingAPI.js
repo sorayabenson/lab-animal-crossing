@@ -8,6 +8,14 @@ export const callVillagers = async () => {
     return shapedData;
 }
 
+export const villagerTicket = async (id) => {
+    const res = await fetch(`https://ac-vill.herokuapp.com/villagers/${id}`)
+    const data = await res.json();
+
+    return data;
+}
+
+
 // export const callVillagers = async () => {
 //     let villagers = [];
     
