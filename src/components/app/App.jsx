@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Router, Route, Switch} from 'react-router';
+import { Router, Route, Switch} from 'react-router';
 import Villagers from '../../containers/Villagers';
 import Detail from '../../containers/Detail';
 
