@@ -1,11 +1,14 @@
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
-import App from './App';
+import { render, cleanup, screen } from '@testing-library/react';
+import Villagers from '../../containers/Villagers';
+import Detail from '../../containers/Detail';
 
-describe('App component', () => {
+describe('Villagers component', () => {
   afterEach(() => cleanup());
-  it('renders App', () => {
-    const { asFragment } = render(<App />);
-    expect(asFragment()).toMatchSnapshot();
+  it('renders a list of villagers', () => {
+    render(<Villagers />);
+    screen.getByText('we are circling for landing!');
+    const ul = screen.findByRole('list', { name: 'villagers' })
+    // expect(ul).not.toBeEmptyDOMElement()
   });
 });
